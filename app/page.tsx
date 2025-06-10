@@ -1,6 +1,7 @@
 "use client";
 
 import { animate, createScope, Scope } from "animejs";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 
@@ -64,21 +65,20 @@ export default function Home() {
                     Thanks for visiting!
                 </div>
             </div>
-            <div className="mb-4 flex w-screen items-end justify-between">
-                <div className="box-content h-4 w-[35vw] border-b-[1px] bg-slate-600 text-white" />
-                <div className="box-content h-4 w-[5vw] rounded-br-full border-b-[1px] border-r-[1px] bg-slate-600 text-white" />
-                <div className="-ml-[0.6px] mb-4 box-content h-4 w-[5vw] rounded-tl-full border-l-[1px] border-t-[1px] text-white" />
-                <div className="box-border h-4 w-[10vw] border-t-[1px] pb-8 text-white">
-                    <Link
-                        className="mt-4 text-center font-mono text-white"
-                        href="#"
-                    >
-                        read more about me
-                    </Link>
-                </div>
-                <div className="-mr-[0.6px] mb-4 box-content h-4 w-[5vw] rounded-tr-full border-r-[1px] border-t-[1px] text-white" />
-                <div className="box-content h-4 w-[5vw] rounded-bl-full border-b-[1px] border-l-[1px] bg-slate-600 text-white" />
-                <div className="box-content h-4 w-[35vw] border-b-[1px] bg-slate-600 text-white" />
+            <div className="flex w-screen flex-col items-center justify-end">
+                <img
+                    src="/navigation-sep.svg"
+                    alt="separator"
+                    width="100%"
+                    height="8"
+                    className="mb-4"
+                />
+                <Link
+                    className="-mt-20 text-center font-mono text-white"
+                    href="#"
+                >
+                    read more about me
+                </Link>
             </div>
         </div>
     );
